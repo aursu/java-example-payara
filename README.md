@@ -38,4 +38,4 @@ New project setup inside IntelliJ IDEA:
 
 * Then press `Next` button and select `Version` as `Jakarta EE 9`, check on `Web Profile` and press `Create` button.
 
-Done.
+To use  JSF it is necessary to install plugin [`Jakarta EE: Server Faces (JSF)`](https://plugins.jetbrains.com/plugin/18583-jakarta-ee-server-faces-jsf-) in IntelliJ IDEA
