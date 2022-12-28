@@ -40,8 +40,9 @@ New project setup inside IntelliJ IDEA:
 
 To use  JSF it is necessary to install plugin [`Jakarta EE: Server Faces (JSF)`](https://plugins.jetbrains.com/plugin/18583-jakarta-ee-server-faces-jsf-) in IntelliJ IDEA
 
-### Create JDBC Connection Pool
+### Create JDBC Connection Pool and Resource
 
     /usr/local/payara6/bin/asadmin add-library mysql-connector-j-8.0.31.jar
-    /usr/local/payara6/bin/asadmin create-jdbc-connection-pool --restype javax.sql.DataSource --datasourceclassname com.mysql.cj.jdbc.MysqlDataSource --property user=username:password=Secr8*Et*p*Asswd#:DatabaseName=database:ServerName=127.0.0.1:port=3306:useSSL=false DatabaseConnectionPool
+    /usr/local/payara6/bin/asadmin create-jdbc-connection-pool --restype javax.sql.DataSource --datasourceclassname com.mysql.cj.jdbc.MysqlDataSource --property user=username:password=Secr8*Et*p*Asswd#:DatabaseName=database:ServerName=127.0.0.1:port=3306:useSSL=false:SslMode=DISABLED:ZeroDateTimeBehavior=CONVERT_TO_NULL:ServerTimezone=LOCAL DatabaseConnectionPool
     /usr/local/payara6/bin/asadmin ping-connection-pool DatabaseConnectionPool
+    /usr/local/payara6/bin/asadmin create-jdbc-resource --connectionpoolid DatabaseConnectionPool jdbc/database
