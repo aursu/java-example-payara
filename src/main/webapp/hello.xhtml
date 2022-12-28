@@ -6,16 +6,13 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
-    <h:head>
-        <title>Hello, user page</title>
-    </h:head>
-    <h:body>
-        <h:outputLabel value="Hello, User:"/>
-        <h:form>
-            <h:inputText value="#{userBean.user.name}" />
-            <h:inputText value="#{userBean.user.age}" />
-            <h:commandButton action="#{userBean.sayHello()}" value="Hello!"/>
-        </h:form>
-    </h:body>
+   <h:head>
+      <title>Hello!</title>
+   </h:head>
+   <h:body>
+      <h:outputLabel value="Hello, #{userBean.user.name}!" />
+      <br/>
+      <h:outputText value="#{userBean.advice}"/>
+   </h:body>
 </f:view>
 </html>
