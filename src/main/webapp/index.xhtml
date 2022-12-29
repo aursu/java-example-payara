@@ -16,6 +16,10 @@
             <h:inputText value="#{userBean.user.age}" />
             <h:commandButton action="#{userBean.sayHello()}" value="Hello!"/>
         </h:form>
+        <br/>
+        <h:form>
+            <h:commandLink value="Artists" action="#{artistBean.showArtists()}"/>
+        </h:form>
     </h:body>
 </f:view>
 </html>
